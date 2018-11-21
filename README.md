@@ -1,5 +1,4 @@
 # autoEcm
-Instructions:
 The script was written for Python3. Install the latest version from here:
     https://www.python.org/downloads/
 
