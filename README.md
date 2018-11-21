@@ -1,6 +1,6 @@
 # autoEcm
-Instructions
- The script was written for Python3. Install the latest version from here:
+Instructions:
+The script was written for Python3. Install the latest version from here:
     https://www.python.org/downloads/
 
     1. Clone this repo, unzip it somewhere
