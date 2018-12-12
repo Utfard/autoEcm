@@ -15,7 +15,7 @@ The script was written for Python3. Install the latest version from here:
 
 Python installation:
 Download latest version and check box ADD PYTHON PATH VARIABLE during install process
-set http_proxy=https://user.name:password@weber.orange.intra:8080
-set https_proxy=https://user.name:password@weber.orange.intra:8080
+    set http_proxy=https://user.name:password@weber.orange.intra:8080   
+    set https_proxy=https://user.name:password@weber.orange.intra:8080
 
 Firefox must be updated to latest version ( 66.x ) 
