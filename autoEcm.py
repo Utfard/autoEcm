@@ -11,16 +11,15 @@ from time import sleep
 ##### Fill in INTRANET credentials ######
 #########################################
 user = "aaa.bbb"
-password = "xxxxx"
+password = "password"
 #########################################
 browser = webdriver.Firefox()
-browser.implicitly_wait(30)
+browser.implicitly_wait(120)
 timeout = 600
-sleepTimer = 1
+sleepTimer = 2
 global itemId
 global currentPage
-#CurrentPage = 1 
-
+#currentPage = 10
 
 def waitForHomePage():
         try:
@@ -56,7 +55,7 @@ def selectProductByElementId(itemId,currentPage):
     sleep(sleepTimer)
    
         ##### Click Select Category - SH
-    browser.find_element_by_xpath("//a[@class='wfs-accessrequestbtn' and contains (@onclick,'Second hand')]").click()
+    browser.find_element_by_xpath("//a[@class='wfs-accessrequestbtn' and contains (@onclick,'Second Hand')]").click()
 
     sleep(sleepTimer)
     if (currentPage>0):
@@ -91,12 +90,12 @@ def selectProductByElementId(itemId,currentPage):
     sleep(sleepTimer)
     sleep(sleepTimer)
     
-    Select(browser.find_element_by_id('WFS_GSM_PaymentType_3eec90ff-b787-41ca-90cb-bff37e875bc0_$LookupField')).select_by_visible_text("Cash/Card")
+    Select(browser.find_element_by_id('WFS_GSM_PaymentType_3eec90ff-b787-41ca-90cb-bff37e875bc0_$LookupField')).select_by_visible_text("Cash/Card/OMY")
 
     ##### Check I confirm
     sleep(sleepTimer)
     browser.find_element_by_id('WFS_GSM_SubcategoryConfirmation_7d5e1565-3663-4f0f-b76a-8e9c092e7188_$BooleanField').click()
-
+    
     ##### Submit page
     sleep(sleepTimer)
     browser.find_element_by_xpath("//a[@id='BWS.Orange.WFS.GSM.CustomActionsTab.CustomActionsGroup.StartWorkflow-Large']").click()  
@@ -109,7 +108,7 @@ def selectProductByElementId(itemId,currentPage):
 
 def main():
 
-
+ 
     url = "ecm.app.orange.intra/workflows/gsm/SitePages/Home.aspx"
     baseUrl="http://" + user + ":" + password +"@" + url
 
@@ -118,7 +117,7 @@ def main():
     waitForHomePage()
 
     while True: 
-        for currentPage in range (10):
+        for currentPage in range (0,20):
             for itemId in range (1,51):
 #                print ("itemId= ", itemId, "currentPage=", currentPage)
                 sleep(sleepTimer)
@@ -127,3 +126,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
