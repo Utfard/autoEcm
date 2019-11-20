@@ -86,11 +86,11 @@ def selectProductByElementId(itemId,currentPage):
 
 
 
-    ##### Select paymentType
-    sleep(sleepTimer)
-    sleep(sleepTimer)
-    
-    Select(browser.find_element_by_id('WFS_GSM_PaymentType_3eec90ff-b787-41ca-90cb-bff37e875bc0_$LookupField')).select_by_visible_text("Cash/Card/OMY")
+#    ##### Select paymentType
+#    sleep(sleepTimer)
+#    sleep(sleepTimer)
+#    
+#    Select(browser.find_element_by_id('WFS_GSM_PaymentType_3eec90ff-b787-41ca-90cb-bff37e875bc0_$LookupField')).select_by_visible_text("Cash/Card/OMY")
 
     ##### Check I confirm
     sleep(sleepTimer)
